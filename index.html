@@ -159,9 +159,8 @@
                         win and wp forum coffee mug!</p>
                     <div
                         class="bg-white w-[300px] lg:w-[400px] h-14 rounded-[50px] pl-5 pr-1 flex justify-center items-center">
-                        <input class="w-full" type="text" placeholder="Search here anything">
-                        <button
-                            class="btn w-24 lg:w-32 h-11 rounded-[50px] bg-[#797DFC] font-bold text-xl text-white">Search</button>
+                        <input id="search-text" class="w-full" type="text" placeholder="Search here anything">
+                        <button onclick="filterPosts()" class="btn w-24 lg:w-32 h-11 rounded-[50px] bg-[#797DFC] font-bold text-xl text-white">Search</button>
                     </div>
                 </div>
                 <div
@@ -424,6 +423,7 @@
     <script src="./scripts/allposts.js"></script>
     <script src="./scripts/latestpost.js"></script>
     <script src="./scripts/readcontainer.js"></script>
+    <script src="./scripts/filtering.js"></script>
 </body>
 
 </html>

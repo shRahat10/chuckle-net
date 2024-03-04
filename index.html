@@ -288,11 +288,11 @@
                                         stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" />
                                 </g>
                             </svg>
-                            <p>Mark as read (<span>4</span>)</p>
+                            <p>Mark as read (<span id="mark-as-read">0</span>)</p>
                         </div>
                     </div>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center bg-white rounded-2xl p-4">
+                    <div id="read-container" class="flex flex-col gap-3">
+                        <!-- <div class="space-y-4 flex justify-between items-center bg-white rounded-2xl p-4">
                             <h1 class="font-bold text-base">10 Kids Unaware of Their Halloween Costume</h1>
                             <div class="flex gap-2">
                                 <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
@@ -314,7 +314,7 @@
                                 </svg>
                                 <p>1,568</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -423,6 +423,7 @@
 
     <script src="./scripts/allposts.js"></script>
     <script src="./scripts/latestpost.js"></script>
+    <script src="./scripts/readcontainer.js"></script>
 </body>
 
 </html>

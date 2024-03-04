@@ -64,7 +64,7 @@ fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
                     </div>
                 </div>
                 <div>
-                    <button>
+                    <button onclick="readPost('${posts.title.replace(/'/g, "\\'")}', ${posts.view_count})">
                         <svg width="27.999817" height="28.000000" viewBox="0 0 27.9998 28" fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">

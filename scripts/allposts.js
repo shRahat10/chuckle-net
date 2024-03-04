@@ -84,4 +84,4 @@ fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
     })
     .catch(error => {
         console.error('Error fetching posts:', error);
-    })
+    });

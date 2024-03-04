@@ -1,13 +1,27 @@
+const allPostContainer = document.getElementById('all-post-container');
+const loading = document.getElementById('loading-spinner');
+const postsContainer = document.getElementById('posts-container');
+
+function showLoadingSpinner() {
+    loading.classList.remove('hidden');
+    loading.classList.add('inline-block');
+
+    setTimeout(() => {
+        loading.classList.remove('inline-block');
+        loading.classList.add('hidden');
+        filterPosts();
+    }, 2000);
+}
+
 function filterPosts() {
     const inputText = document.getElementById('search-text').value.toLowerCase();
     console.log(inputText);
-    const allPostContainer = document.getElementById('all-post-container');
-    allPostContainer.innerHTML = '';
+
+    postsContainer.innerHTML = '';
 
     fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
         .then(response => response.json())
         .then(data => {
-
             data.posts.forEach(posts => {
                 console.log(posts);
 
@@ -84,8 +98,7 @@ function filterPosts() {
                 </div>
             </div>
                 `;
-                    allPostContainer.appendChild(postDiv);
-
+                    postsContainer.appendChild(postDiv);
                 }
             });
             console.log('successfully fetched the posts');

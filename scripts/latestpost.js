@@ -38,7 +38,7 @@ fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
                                 stroke-linejoin="round" />
                         </g>
                     </svg>
-                    <p>${post.author.posted_date}</p>
+                    <p>${post.author.posted_date ? post.author.posted_date : 'No published date'}</p>
                 </div>
                 <h2 class="card-title font-extrabold">${post.title}</h2>
                 <p>${post.description}</p>
@@ -46,7 +46,7 @@ fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
                     <img class="rounded-full w-11 h-11" src="${post.profile_image}" alt="">
                     <div>
                         <h1 class="font-bold text-base">${post.author.name}</h1>
-                        <p class="text-base">${post.author.designation}</p>
+                        <p class="text-base">${post.author.designation ? post.author.designation : 'Unknown'}</p>
                     </div>
                 </div>
             </div>
